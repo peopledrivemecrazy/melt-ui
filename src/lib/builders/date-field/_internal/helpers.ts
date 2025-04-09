@@ -411,10 +411,15 @@ export function isFirstSegment(id: string, fieldId: string, rootElement?: Parent
  * so it can be associated via `aria-describedby` and read by
  * screen readers as the user interacts with the date field.
  */
-export function setDescription(id: string, formatter: Formatter, value: DateValue) {
+export function setDescription(
+	id: string,
+	formatter: Formatter,
+	value: DateValue,
+	rootElement?: ParentNode
+) {
 	if (!isBrowser) return;
 	const valueString = formatter.selectedDate(value);
-	const el = getElementById(id);
+	const el = getElementById(id, rootElement);
 	if (!el) {
 		const div = document.createElement('div');
 		div.style.cssText = styleToString({
@@ -433,9 +438,9 @@ export function setDescription(id: string, formatter: Formatter, value: DateValu
  * the provided ID. This function should be called when the
  * date field is unmounted.
  */
-export function removeDescriptionElement(id: string) {
+export function removeDescriptionElement(id: string, rootElement?: ParentNode) {
 	if (!isBrowser) return;
-	const el = getElementById(id);
+	const el = getElementById(id, rootElement);
 	if (!el) return;
 	document.body.removeChild(el);
 }

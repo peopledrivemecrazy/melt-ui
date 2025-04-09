@@ -371,7 +371,7 @@ export function createDateField(props?: CreateDateFieldProps) {
 
 			return {
 				destroy() {
-					removeDescriptionElement(ids.description.get());
+					removeDescriptionElement(ids.description.get(), $rootElement);
 				},
 			};
 		},
@@ -1869,7 +1869,7 @@ export function createDateField(props?: CreateDateFieldProps) {
 	effect(value, ($value) => {
 		if ($value) {
 			// Set the description of the field for screen readers
-			setDescription(ids.description.get(), formatter, $value);
+			setDescription(ids.description.get(), formatter, $value, $rootElement);
 		}
 		if ($value && placeholder.get() !== $value) {
 			placeholder.set($value);
