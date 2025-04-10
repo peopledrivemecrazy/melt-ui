@@ -57,10 +57,6 @@ p {
 [data-melt-datefield-segment]:focus {
 	outline: 1px solid rgb(var(--color-magnum-400) / var(--tw-text-opacity));
 }
-[data-melt-datefield-segment].s-rxvcq_so-rgV:not([data-segment='literal']) {
-	padding-left: 0.125rem;
-	padding-right: 0.125rem;
-}
 
 [data-melt-datefield-validation] {
 	color: rgb(var(--color-red-400) / var(--tw-text-opacity));
