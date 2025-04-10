@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"repository": "https://github.com/peopledrivemecrazy/melt-ui",
 	"author": "Shriji Kondan Elangovan",
+	"description": "Fork of Melt UI with some changes",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
