@@ -1,9 +1,9 @@
 {
-	"name": "@melt-ui/svelte",
-	"version": "0.86.6",
+	"name": "@peopledrivemecrazy/svelte",
+	"version": "0.0.1",
 	"license": "MIT",
-	"repository": "github:melt-ui/melt-ui",
-	"author": "Thomas G. Lopes",
+	"repository": "https://github.com/peopledrivemecrazy/melt-ui",
+	"author": "Shriji Kondan Elangovan",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
